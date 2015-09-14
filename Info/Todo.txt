@@ -1,0 +1,5 @@
+﻿
+- Satan's Spell
+	Gives the player +30% damage and speed for all weapons, +30% movement speed, extreme mana and health regen, 
+	+50% mining speed and block placement speed, gives +75 defense, +75% minion knockback, +40% minion damage and it gives you +8 minions. 
+	It only works if player's name is "miniek" or "Eldrazi"
