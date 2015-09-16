@@ -20,7 +20,7 @@ namespace Mharadium.Items.Accessories
 
             item.accessory = true;
 
-            item.defense = 75; 
+            item.defense = 150; 
         }
 
         public override void UpdateEquip(Player player)

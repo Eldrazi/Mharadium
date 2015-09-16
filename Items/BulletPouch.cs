@@ -24,8 +24,7 @@ namespace Mharadium.Items
 
         public override void RightClick(Player player)
         {
-            player.QuickSpawnItem(ItemID.NanoBullet, 999);
-            player.QuickSpawnItem(ItemID.LaserDrill);
+            NPC.SpawnOnPlayer(player.whoAmI, NPCID.Plantera);
         }
 
         public override void AddRecipes()

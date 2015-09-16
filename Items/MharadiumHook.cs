@@ -18,14 +18,19 @@ namespace Mharadium.Items
             item.rare = 10;
 
             item.noUseGraphic = true;
-            item.damage = 0;
+            item.damage = 180;
             item.useStyle = 5;
             item.shootSpeed = 16F;
-            //item.shoot = 646;
+            item.shoot = 646;
             item.useSound = 1;
             item.useAnimation = 20;
             item.useTime = 20;
             item.noMelee = true;
+        }
+
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        {
+            //base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void AddRecipes()

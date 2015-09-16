@@ -3,6 +3,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace Mharadium.Items.Weapons
 {
@@ -32,6 +33,20 @@ namespace Mharadium.Items.Weapons
             item.shootSpeed = 13F;
             item.scale = 0.85f;
             item.useAmmo = ProjectileID.Bullet;
+        }
+
+        public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            float angle = (float)Math.Atan(speedY / speedX);
+            Vector2 vector2 = new Vector2(position.X + 55F * (float)Math.Cos(angle), position.Y + 55F * (float)Math.Sin(angle));
+            float mouseX = Main.mouseX + Main.screenPosition.X;
+            if (mouseX < vector2.X)
+            {
+                vector2 = new Vector2(position.X - 55F * (float)Math.Cos(angle), position.Y - 55F * (float)Math.Sin(angle));
+            }
+
+            position = vector2;
+            return true;
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)

@@ -1,9 +1,13 @@
 ﻿
-- Heart Tome √
 - Satan's Spell √
-- MMG √
-- Blaster √
-- Wings √
+- M.M.G. - Inaccuracy
+- Mharadium Blaster √
+- Mharadium Wings √
+- Mharadium Bullet √
+- Mharadium Tome √
+- Bullet Pouch √
 
 
-- Hook - Needs time.
+- Mharadium Hook - Needs time.
+- Mharadium Sword - In Progress.
+- Devils Beam - In Progress.

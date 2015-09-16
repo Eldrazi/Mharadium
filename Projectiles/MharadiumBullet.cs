@@ -19,17 +19,17 @@ namespace Mharadium.Projectiles
             projectile.penetrate = 1;
             projectile.light = 0.5f;
             projectile.alpha = 255;
-            projectile.timeLeft = 600;
+            projectile.timeLeft = 300;
             projectile.ranged = true;
         }
 
         public override void AI()
         {
-            for (int index1 = 0; index1 < 10; ++index1)
+            for (int index1 = 0; index1 < 5; ++index1)
             {
                 float x = projectile.position.X - projectile.velocity.X / 10f * (float)index1;
                 float y = projectile.position.Y - projectile.velocity.Y / 10f * (float)index1;
-                int index2 = Dust.NewDust(new Vector2(x, y), 1, 1, 75, 0.0f, 0.0f, 0, new Color(), 1f);
+                int index2 = Dust.NewDust(new Vector2(x, y), 1, 1, 182, 0.0f, 0.0f, 0, new Color(), 1f);
                 Main.dust[index2].color = new Color(255, 0, 200);
                 Main.dust[index2].alpha = projectile.alpha;
                 Main.dust[index2].position.X = x;
@@ -116,6 +116,12 @@ namespace Mharadium.Projectiles
             target.AddBuff(BuffID.ShadowFlame, 30);
             target.AddBuff(BuffID.Ichor, 30);
             base.OnHitNPC(target, damage, knockback, crit);
+        }
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
+            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y);
+            return true;
         }
     }
 }

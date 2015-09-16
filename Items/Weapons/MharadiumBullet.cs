@@ -20,7 +20,7 @@ namespace Mharadium.Items.Weapons
 
             item.ranged = true;
             item.consumable = true;
-            item.damage = 40;
+            item.damage = 80;
             item.knockBack = 4.5F;
             item.shootSpeed = 5F;
             item.shoot = mod.ProjectileType("MharadiumBullet");
