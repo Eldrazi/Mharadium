@@ -5,6 +5,7 @@
 - Mharadium Wings √
 - Mharadium Bullet √
 - Mharadium Tome √
+- Mharadium Yoyo √
 - Bullet Pouch √
 
 
