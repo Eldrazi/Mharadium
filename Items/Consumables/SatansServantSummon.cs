@@ -30,7 +30,7 @@ namespace Mharadium.Items.Consumables
 
         public override bool UseItem(Player player)
         {
-            NPC.NewNPC((int)player.position.X, (int)player.position.Y - 100, mod.NPCType("SatansServant"));
+            NPC.SpawnOnPlayer(Main.myPlayer, mod.NPCType("SatansServant"));
             Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
             return true;
         }

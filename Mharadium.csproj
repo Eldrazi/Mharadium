@@ -51,6 +51,7 @@
     <Content Include="Items\Weapons\MharadiumYoyo.png" />
     <Content Include="NPCs\SatansServant.png" />
     <Content Include="Projectiles\DevilsBeam.png" />
+    <Content Include="Projectiles\MharadiumInferno.png" />
     <Content Include="Projectiles\MharadiumBullet.png" />
     <Content Include="Projectiles\MharadiumYoyo.png" />
   </ItemGroup>
@@ -79,6 +80,7 @@
     <Compile Include="NPCs\SatansServant.cs" />
     <Compile Include="Projectiles\DevilsBeam.cs" />
     <Compile Include="Projectiles\MharadiumBullet.cs" />
+    <Compile Include="Projectiles\MharadiumInferno.cs" />
     <Compile Include="Projectiles\MharadiumYoyo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -1,14 +1,26 @@
 ﻿
-- Satan's Spell √
-- M.M.G. - Inaccuracy
-- Mharadium Blaster √
-- Mharadium Wings √
-- Mharadium Bullet √
-- Mharadium Tome √
-- Mharadium Yoyo √
-- Bullet Pouch √
+- ITEMS
 
+FINISHED:
+	- M.M.G. - Inaccuracy
+	- Mharadium Blaster √
+	- Mharadium Wings √
+	- Mharadium Bullet √
+	- Mharadium Tome √
+	- Mharadium Yoyo √
+	- Bullet Pouch √
 
-- Mharadium Hook - Needs time.
-- Mharadium Sword - In Progress.
-- Devils Beam - In Progress.
+WIP:
+	- Satan's Spell - Needs custom buff.
+	- Mharadium Hook - Needs time.
+	- Mharadium Sword - In Progress.
+	- Devils Beam - In Progress.
+
+-NPCs
+
+-----------------------------------------------------------------------------------------
+
+FINISHED:
+
+WIP:
+	- Satan's Servant - Needs more magic/projectiles. Also needs a second, harder phase.

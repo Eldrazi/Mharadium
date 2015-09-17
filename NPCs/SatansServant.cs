@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
 using Terraria;
@@ -21,6 +22,8 @@ namespace Mharadium.NPCs
             npc.soundKilled = 2;
             npc.knockBackResist = 0F;
             npc.value = Item.sellPrice(5, 0, 0, 0);
+            npc.boss = true;
+            music = 25;
         }
 
         public override void AI()
@@ -104,14 +107,14 @@ namespace Mharadium.NPCs
                 }
                 npc.netUpdate = true;
             }
-            if((double)npc.ai[1] > 0.0)
+            if((double)npc.ai[1] > 0.0) // Shooting
             {
                 --npc.ai[1];
                 if(npc.ai[1] == 25.0F)
                 {
                     if(Main.netMode != 1)
                     {
-                        float num1 = 8F;
+                        float num1 = 10F;
                         Vector2 vector2 = new Vector2(npc.position.X + npc.width * 0.5F, npc.position.Y); // The center of this npc.
                         float dirX = Main.player[npc.target].position.X + Main.player[npc.target].width * 0.5F - vector2.X; // The direction over the X axis.
                         float dirY = Main.player[npc.target].position.Y + Main.player[npc.target].height * 0.5F - vector2.Y; // The direction over the Y axis.
@@ -121,7 +124,7 @@ namespace Mharadium.NPCs
                         float speedX = dirX * num7;
                         float speedY = dirY * num7;
                         int damage = 40;
-                        int type = 291;
+                        int type = mod.ProjectileType("MharadiumInferno");
                         int projID = Projectile.NewProjectile(vector2.X, vector2.Y, speedX, speedY, type, damage, 0.0F, Main.myPlayer, 0.0f, 0.0f);
                         Main.projectile[projID].timeLeft = 300;
                         npc.localAI[0] = 0.0f;

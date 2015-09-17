@@ -20,7 +20,8 @@ namespace Mharadium.Items.Accessories
 
             item.accessory = true;
 
-            item.defense = 150; 
+            item.defense = 150;
+            item.crit += 40;
         }
 
         public override void UpdateEquip(Player player)
@@ -41,6 +42,8 @@ namespace Mharadium.Items.Accessories
 
                 player.lifeRegen *= 10; // Insane health regen.
                 player.manaRegen *= 10; // Insane mana regen.
+
+                player.AddBuff(73, 2); // Did cursed flames buff for now. Will be a custom buff later on.
             }
             else
             {

@@ -21,6 +21,7 @@ namespace Mharadium.Projectiles
             projectile.alpha = 255;
             projectile.timeLeft = 300;
             projectile.ranged = true;
+            projectile.ignoreWater = true;
         }
 
         public override void AI()
