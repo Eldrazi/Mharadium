@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 
 using Terraria;
 using Terraria.ID;
@@ -31,6 +32,19 @@ namespace Mharadium.Items.Weapons
             item.noMelee = true;
             item.noUseGraphic = true;
             item.melee = true;
+        }
+
+        public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            float angle = (float)Math.Atan(speedY / speedX);
+            Vector2 vector2 = new Vector2(position.X + 40F * (float)Math.Cos(angle), position.Y + 40F * (float)Math.Sin(angle));
+            float mouseX = Main.mouseX + Main.screenPosition.X;
+            if (mouseX < vector2.X)
+            {
+                vector2 = new Vector2(position.X - 40F * (float)Math.Cos(angle), position.Y - 40F * (float)Math.Sin(angle));
+            }
+            Projectile.NewProjectile(vector2.X, vector2.Y, speedX * 2, speedY * 2, mod.ProjectileType("DevilsJavelin"), damage, knockBack, item.owner);
+            return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
         }
 
         public override void AddRecipes()

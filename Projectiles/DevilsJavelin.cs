@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 using Terraria;
 using Terraria.ID;
@@ -8,21 +7,19 @@ using Terraria.ModLoader;
 
 namespace Mharadium.Projectiles
 {
-    /// <summary>
-    /// Not yet finished!
-    /// </summary>
-    public class DevilsBeam : ModProjectile
+    public class DevilsJavelin : ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.name = "Example Bullet";
+            projectile.name = "Devil's Javelin";
             projectile.width = 16;
             projectile.height = 16;
             projectile.aiStyle = 27;
-            projectile.damage = 1000;
+            projectile.damage = 330;
             projectile.melee = true;
             projectile.penetrate = -1;
-            projectile.light = 1f;
+            projectile.tileCollide = false;
+            projectile.light = 1F;
             projectile.alpha = (int)byte.MaxValue;
             projectile.friendly = true;
         }

@@ -1,28 +1,19 @@
 ﻿
 - ITEMS
 
-FINISHED:
-	- M.M.G. - Inaccuracy
-	- Mharadium Blaster √
-	- Mharadium Wings √
-	- Mharadium Bullet √
-	- Mharadium Tome √
-	- Mharadium Hook √
-	- Satans Servant Summon √
-	- Bullet Pouch √
-
 WIP:
 	- Satan's Spell - Needs custom buff.
 	- Mharadium Sword - In Progress.
 	- Devils Beam - In Progress.
-	- Mharadium Spear - Needs to shoot a projectile.
-	- Mharadium Yoyo - Needs to shoot projectiles.
+	- Wings need horizontal hover
+	- Find following bullet bug.
+
+===================================================================================
 
 -NPCs
 
------------------------------------------------------------------------------------------
-
-FINISHED:
-
 WIP:
-	- Satan's Servant - Needs a second, harder phase.
+	- Satan's Servant - Second phase needs to be better.
+
+- NOTES
+	npc.ai[4] does not exist.

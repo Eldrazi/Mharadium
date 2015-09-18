@@ -23,12 +23,7 @@ namespace Mharadium.Items.Weapons
             item.useAnimation = 30;
             item.useTime = 15;
             item.mana = 5;
-        }
-
-        public override bool UseItem(Player player)
-        {
-            player.HealEffect(5); // Heals the player for 5 HP.
-            return true; // Return true, because the item has an effect.
+            item.healLife = 5;
         }
 
         public override void AddRecipes()

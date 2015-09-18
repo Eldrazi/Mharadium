@@ -49,5 +49,12 @@ namespace Mharadium.Projectiles
             }
             return false;
         }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.ShadowFlame, 30);
+            target.AddBuff(BuffID.Ichor, 30);
+            base.OnHitNPC(target, damage, knockback, crit);
+        }
     }
 }

@@ -15,10 +15,11 @@ namespace Mharadium.Items.Weapons
             item.width = 62;
             item.height = 26;
             item.toolTip = "Only true heroes can handle its power!";
+            item.toolTip2 = "50% chance not to consume ammo.";
             item.value = Item.sellPrice(5, 0, 0, 0);
             item.rare = 10;
 
-            item.damage = 1000; // 130
+            item.damage = 130;
             item.crit += 20;
 
             item.ranged = true;
@@ -65,8 +66,8 @@ namespace Mharadium.Items.Weapons
             }
 
             position = vector2;
-            speedX = spinningpoint.X;
-            speedY = spinningpoint.Y;
+            speedX = spinningpoint.X * 3; // * 3 for faster bullet speed.
+            speedY = spinningpoint.Y * 3; // * 3 for faster bullet speed.
             return true; // Spawn the bullet with the changed position and rotation.
         }
 

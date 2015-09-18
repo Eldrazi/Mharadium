@@ -1,4 +1,14 @@
-﻿- 17-09-'15
+﻿- 18-09-'15
+	- Mharadium Tome now actually heals.
+	- Updated Mharadium Yoyo Item visual.
+	- Added Thrasher (needs finishing).
+	- Added Devil's Javelin.
+	- Added Suspicious Looking Guitar.
+	- Added Mharadium Arrow (also bounces off of walls).
+	- Added Mharadium Bow.
+	- Added Piercing Mharadium Bullet (also pierces infinitely).
+
+- 17-09-'15
 	- MMG now has a 50% chance not to consume ammo.
 	- Mharadium Yoyo now fires projectiles, has more range and has infinite flight time.
 	- Projectiles from Mharadium Sword no longer spawn inside the player. They also only fire every second swing now.
@@ -17,7 +27,7 @@
 - 15-09-'15 and before
 	- Added Devil's Beam.
 	- Added Mharadium Yoyo.
-	- Added Mharadium Bullet.
+	- Added Following Mharadium Bullet.
 	- Added Mharadium Wings.
 	- Added Mharadium Blaster.
 	- Added Mharadium Sword.
