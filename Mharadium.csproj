@@ -37,9 +37,11 @@
     <Content Include="build.txt" />
     <Content Include="Dusts\Flame.png" />
     <Content Include="Info\Todo.txt" />
+    <Content Include="Info\UpdateLog.txt" />
     <Content Include="Items\Consumables\SatansServantSummon.png" />
-    <Content Include="Items\Weapons\MharadiumTome.png" />
     <Content Include="Items\MharadiumHook.png" />
+    <Content Include="Items\Weapons\MharadiumSpear.png" />
+    <Content Include="Items\Weapons\MharadiumTome.png" />
     <Content Include="Items\Weapons\MharadiumBullet.png" />
     <Content Include="Items\Weapons\MharadiumBlaster.png" />
     <Content Include="Items\Accessories\MharadiumWings.png" />
@@ -50,10 +52,15 @@
     <Content Include="Items\Accessories\MharadiumWings_Wings.png" />
     <Content Include="Items\Weapons\MharadiumYoyo.png" />
     <Content Include="NPCs\SatansServant.png" />
+    <Content Include="Projectiles\DevilsSphere.png" />
     <Content Include="Projectiles\DevilsBeam.png" />
+    <Content Include="Projectiles\Hooks\MharadiumHook_Chain.png" />
+    <Content Include="Projectiles\Hooks\MharadiumHook.png" />
     <Content Include="Projectiles\MharadiumInferno.png" />
     <Content Include="Projectiles\MharadiumBullet.png" />
+    <Content Include="Projectiles\MharadiumSpear.png" />
     <Content Include="Projectiles\MharadiumYoyo.png" />
+    <Content Include="Projectiles\MharadiumLaser.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
@@ -68,6 +75,7 @@
     <Compile Include="Items\BulletPouch.cs" />
     <Compile Include="Items\Consumables\SatansServantSummon.cs" />
     <Compile Include="Items\Weapons\MharadiumBullet.cs" />
+    <Compile Include="Items\Weapons\MharadiumSpear.cs" />
     <Compile Include="Items\Weapons\MharadiumSword.cs" />
     <Compile Include="Items\Weapons\MharadiumTome.cs" />
     <Compile Include="Items\Weapons\MharadiumBlaster.cs" />
@@ -79,9 +87,13 @@
     <Compile Include="Mharadium.cs" />
     <Compile Include="NPCs\SatansServant.cs" />
     <Compile Include="Projectiles\DevilsBeam.cs" />
+    <Compile Include="Projectiles\Hooks\MharadiumHook.cs" />
     <Compile Include="Projectiles\MharadiumBullet.cs" />
     <Compile Include="Projectiles\MharadiumInferno.cs" />
+    <Compile Include="Projectiles\MharadiumLaser.cs" />
+    <Compile Include="Projectiles\MharadiumSpear.cs" />
     <Compile Include="Projectiles\MharadiumYoyo.cs" />
+    <Compile Include="Projectiles\DevilsSphere.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 
 using Terraria;
 using Terraria.ID;
@@ -11,7 +12,7 @@ namespace Mharadium.Items.Weapons
     /// </summary>
     public class MharadiumSword : ModItem
     {
-        private int currentSwing = 0;
+        private int currentSwing = 1;
 
         public override void SetDefaults()
         {
@@ -40,24 +41,30 @@ namespace Mharadium.Items.Weapons
             item.useSound = 1;
         }
 
+        public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            float angle = (float)Math.Atan(speedY / speedX);
+            Vector2 vector2 = new Vector2(position.X + 55F * (float)Math.Cos(angle), position.Y + 55F * (float)Math.Sin(angle));
+            float mouseX = Main.mouseX + Main.screenPosition.X;
+            if (mouseX < vector2.X)
+            {
+                vector2 = new Vector2(position.X - 55F * (float)Math.Cos(angle), position.Y - 55F * (float)Math.Sin(angle));
+            }
+
+            currentSwing++;
+            if (currentSwing % 2 == 0)
+            {
+                position = vector2;
+                return true;
+            }
+            return false;
+        }
+
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
             target.AddBuff(BuffID.ShadowFlame, 30);
             target.AddBuff(BuffID.Ichor, 30);
             base.OnHitNPC(player, target, damage, knockBack, crit);
-        }
-
-        /// <summary>
-        /// To be implemented.
-        /// </summary>
-        public override bool UseItem(Player player)
-        {
-            currentSwing++;
-            if (currentSwing % 2 == 0)
-            {
-                return true;
-            }
-            return false;
         }
 
         public override void AddRecipes()

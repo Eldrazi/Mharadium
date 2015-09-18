@@ -21,16 +21,11 @@ namespace Mharadium.Items
             item.damage = 180;
             item.useStyle = 5;
             item.shootSpeed = 16F;
-            item.shoot = 646;
+            item.shoot = mod.ProjectileType("MharadiumHook");
             item.useSound = 1;
             item.useAnimation = 20;
             item.useTime = 20;
             item.noMelee = true;
-        }
-
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
-        {
-            //base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void AddRecipes()

@@ -18,7 +18,7 @@ namespace Mharadium.Items.Weapons
             item.value = Item.sellPrice(5, 0, 0, 0);
             item.rare = 10;
 
-            item.damage = 130;
+            item.damage = 1000; // 130
             item.crit += 20;
 
             item.ranged = true;
@@ -68,6 +68,18 @@ namespace Mharadium.Items.Weapons
             speedX = spinningpoint.X;
             speedY = spinningpoint.Y;
             return true; // Spawn the bullet with the changed position and rotation.
+        }
+
+        public override bool ConsumeAmmo(Player player)
+        {
+            if (Main.rand.Next(0, 2) == 0) // 50% chance not to consume ammo.
+                return false;
+            return true;
+        }
+
+        public override bool UseItem(Player player)
+        {
+            return true;// return base.UseItem(player);
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)

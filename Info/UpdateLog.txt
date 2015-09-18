@@ -1,0 +1,26 @@
+﻿- 17-09-'15
+	- MMG now has a 50% chance not to consume ammo.
+	- Mharadium Yoyo now fires projectiles, has more range and has infinite flight time.
+	- Projectiles from Mharadium Sword no longer spawn inside the player. They also only fire every second swing now.
+	- Satan's Servant now has a second 'Rage' state in which his firerate is increased and he shoots lasers.
+	- Satan's Spell now has 666 defence.
+	- Added Devil's Ball.
+	- Added Mharadium Spear.
+	- Added Mharadium Hook.
+	- Added Mharadium Laser.
+
+- 16-09-'15
+	- Added Satan's Servant.
+	- Added Satan's Servant Summon.
+	- Added Mharadium Inferno.
+
+- 15-09-'15 and before
+	- Added Devil's Beam.
+	- Added Mharadium Yoyo.
+	- Added Mharadium Bullet.
+	- Added Mharadium Wings.
+	- Added Mharadium Blaster.
+	- Added Mharadium Sword.
+	- Added Mharadium Tome.
+	- Added Bullet Pouch.
+	- Added Satan's Spell.

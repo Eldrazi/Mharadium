@@ -7,14 +7,16 @@ FINISHED:
 	- Mharadium Wings √
 	- Mharadium Bullet √
 	- Mharadium Tome √
-	- Mharadium Yoyo √
+	- Mharadium Hook √
+	- Satans Servant Summon √
 	- Bullet Pouch √
 
 WIP:
 	- Satan's Spell - Needs custom buff.
-	- Mharadium Hook - Needs time.
 	- Mharadium Sword - In Progress.
 	- Devils Beam - In Progress.
+	- Mharadium Spear - Needs to shoot a projectile.
+	- Mharadium Yoyo - Needs to shoot projectiles.
 
 -NPCs
 
@@ -23,4 +25,4 @@ WIP:
 FINISHED:
 
 WIP:
-	- Satan's Servant - Needs more magic/projectiles. Also needs a second, harder phase.
+	- Satan's Servant - Needs a second, harder phase.
