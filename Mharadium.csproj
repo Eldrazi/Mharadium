@@ -38,11 +38,27 @@
     <Content Include="Dusts\Flame.png" />
     <Content Include="Info\Todo.txt" />
     <Content Include="Info\UpdateLog.txt" />
+    <Content Include="Items\Accessories\MharadiumBoots.png" />
+    <Content Include="Items\Accessories\MharadiumEmblem.png" />
+    <Content Include="Items\Accessories\MharadiumHealthBand.png" />
+    <Content Include="Items\Accessories\MharadiumMagicBall.png" />
+    <Content Include="Items\Accessories\MharadiumShield.png" />
+    <Content Include="Items\Accessories\MharadiumSuperPowers.png" />
+    <Content Include="Items\Consumables\MharadiumArrowQuiver.png" />
+    <Content Include="Items\Consumables\FollowingMharadiumBulletPouch.png" />
+    <Content Include="Items\Consumables\PiercingMharadiumBulletPouch.png" />
     <Content Include="Items\Consumables\SatansServantSummon.png" />
+    <Content Include="Items\Consumables\SuspiciousLookingGuitar.png" />
     <Content Include="Items\MharadiumHook.png" />
+    <Content Include="Items\Misc\DemonFetus.png" />
+    <Content Include="Items\Placeable\Incubator.png" />
+    <Content Include="Items\Weapons\FollowingMharadiumBullet.png" />
+    <Content Include="Items\Weapons\MharadiumArrow.png" />
+    <Content Include="Items\Weapons\MharadiumBow.png" />
+    <Content Include="Items\Weapons\MharadiumYoyo.png" />
+    <Content Include="Items\Weapons\PiercingMharadiumBullet.png" />
     <Content Include="Items\Weapons\MharadiumSpear.png" />
     <Content Include="Items\Weapons\MharadiumTome.png" />
-    <Content Include="Items\Weapons\MharadiumBullet.png" />
     <Content Include="Items\Weapons\MharadiumBlaster.png" />
     <Content Include="Items\Accessories\MharadiumWings.png" />
     <Content Include="Items\Weapons\MharadiumSword.png" />
@@ -50,17 +66,21 @@
     <Content Include="Items\BulletPouch.png" />
     <Content Include="Items\Accessories\SatansSpell.png" />
     <Content Include="Items\Accessories\MharadiumWings_Wings.png" />
-    <Content Include="Items\Weapons\MharadiumYoyo.png" />
-    <Content Include="NPCs\SatansServant.png" />
+    <Content Include="NPCs\Boss\SatansServant.png" />
+    <Content Include="NPCs\Boss\Thrasher.png" />
+    <Content Include="Projectiles\DevilsJavelin.png" />
     <Content Include="Projectiles\DevilsSphere.png" />
     <Content Include="Projectiles\DevilsBeam.png" />
     <Content Include="Projectiles\Hooks\MharadiumHook_Chain.png" />
     <Content Include="Projectiles\Hooks\MharadiumHook.png" />
+    <Content Include="Projectiles\FollowingMharadiumBullet.png" />
+    <Content Include="Projectiles\MharadiumArrow.png" />
+    <Content Include="Projectiles\PiercingMharadiumBullet.png" />
     <Content Include="Projectiles\MharadiumInferno.png" />
-    <Content Include="Projectiles\MharadiumBullet.png" />
     <Content Include="Projectiles\MharadiumSpear.png" />
     <Content Include="Projectiles\MharadiumYoyo.png" />
     <Content Include="Projectiles\MharadiumLaser.png" />
+    <Content Include="Tiles\Incubator.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
@@ -72,9 +92,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dusts\Flame.cs" />
+    <Compile Include="Items\Accessories\MharadiumBoots.cs" />
+    <Compile Include="Items\Accessories\MharadiumEmblem.cs" />
+    <Compile Include="Items\Accessories\MharadiumHealthBand.cs" />
+    <Compile Include="Items\Accessories\MharadiumMagicBall.cs" />
+    <Compile Include="Items\Accessories\MharadiumShield.cs" />
+    <Compile Include="Items\Accessories\MharadiumSuperPowers.cs" />
     <Compile Include="Items\BulletPouch.cs" />
+    <Compile Include="Items\Consumables\MharadiumArrowQuiver.cs" />
+    <Compile Include="Items\Consumables\FollowingMharadiumBulletPouch.cs" />
+    <Compile Include="Items\Consumables\PiercingMharadiumBulletPouch.cs" />
     <Compile Include="Items\Consumables\SatansServantSummon.cs" />
-    <Compile Include="Items\Weapons\MharadiumBullet.cs" />
+    <Compile Include="Items\Consumables\SuspiciousLookingGuitar.cs" />
+    <Compile Include="Items\Misc\DemonFetus.cs" />
+    <Compile Include="Items\Placeable\Incubator.cs" />
+    <Compile Include="Items\Weapons\FollowingMharadiumBullet.cs" />
+    <Compile Include="Items\Weapons\MharadiumArrow.cs" />
+    <Compile Include="Items\Weapons\MharadiumBow.cs" />
     <Compile Include="Items\Weapons\MharadiumSpear.cs" />
     <Compile Include="Items\Weapons\MharadiumSword.cs" />
     <Compile Include="Items\Weapons\MharadiumTome.cs" />
@@ -84,18 +118,26 @@
     <Compile Include="Items\Weapons\MharadiumYoyo.cs" />
     <Compile Include="Items\Weapons\MMG.cs" />
     <Compile Include="Items\Accessories\SatansSpell.cs" />
+    <Compile Include="Items\Weapons\PiercingMharadiumBullet.cs" />
     <Compile Include="Mharadium.cs" />
-    <Compile Include="NPCs\SatansServant.cs" />
+    <Compile Include="NPCs\Boss\SatansServant.cs" />
+    <Compile Include="NPCs\Boss\Thrasher.cs" />
     <Compile Include="Projectiles\DevilsBeam.cs" />
+    <Compile Include="Projectiles\DevilsJavelin.cs" />
     <Compile Include="Projectiles\Hooks\MharadiumHook.cs" />
-    <Compile Include="Projectiles\MharadiumBullet.cs" />
+    <Compile Include="Projectiles\FollowingMharadiumBullet.cs" />
+    <Compile Include="Projectiles\MharadiumArrow.cs" />
     <Compile Include="Projectiles\MharadiumInferno.cs" />
     <Compile Include="Projectiles\MharadiumLaser.cs" />
     <Compile Include="Projectiles\MharadiumSpear.cs" />
     <Compile Include="Projectiles\MharadiumYoyo.cs" />
     <Compile Include="Projectiles\DevilsSphere.cs" />
+    <Compile Include="Projectiles\PiercingMharadiumBullet.cs" />
+    <Compile Include="Tiles\Incubator.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Items\Armor\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

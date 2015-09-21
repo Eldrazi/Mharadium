@@ -1,5 +1,24 @@
-﻿- 18-09-'15
-	- Mharadium Tome now actually heals.
+﻿- 21-09-'15
+	- Mharadium Tome is now Auto-Used (no more clicking).
+
+- 20-09-'15
+	- Mharadium Bow now has a 16% chance not to consume ammo instead of 50%.
+	- Mharadium Arrows now bounce the proper amount of times.
+	- Thrasher and Satan's Servant can now only be summoned in Hell.
+	- Added Incubator.
+	- Added Demon Fetus (not finished).
+	- Added Following Mharadium Bullet Pouch.
+	- Added Piercing Mharadium Bullet Pouch.
+	- Added Mharadium Arrow Quiver.
+	- Added Mharadium Emblem.
+	- Added Mharadium Boots.
+	- Added Mharadium Magic Ball.
+	- Added Mharadium Health Band.
+	- Added Mharadium Super Powers.
+	- Added Mharadium Shield.
+
+- 18-09-'15
+	- Mharadium Tome now actually heals and heals 20 instead of 10 and heals 20 mana.
 	- Updated Mharadium Yoyo Item visual.
 	- Added Thrasher (needs finishing).
 	- Added Devil's Javelin.

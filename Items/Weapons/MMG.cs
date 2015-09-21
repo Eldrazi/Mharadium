@@ -57,7 +57,7 @@ namespace Mharadium.Items.Weapons
             if (float.IsNaN(spinningpoint.X) || float.IsNaN(spinningpoint.Y))
                 spinningpoint = -Vector2.UnitY;
 
-            float angle = (float)Math.Atan(speedY / speedX); // No projectilePos, otherwise the bullets will freak out.
+            float angle = (float)Math.Atan(speedY / speedX);
             Vector2 vector2 = new Vector2(projectilePos.X + 80F * (float)Math.Cos(angle), projectilePos.Y + 80F * (float)Math.Sin(angle));
             float mouseX = Main.mouseX + Main.screenPosition.X;
             if (mouseX < projectilePos.X)

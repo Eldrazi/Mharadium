@@ -9,7 +9,7 @@ namespace Mharadium.Projectiles
 {
     public class MharadiumArrow : ModProjectile
     {
-        int bounceTimes = 3;
+        int bounceTimes = 4;
         public override void SetDefaults()
         {
             projectile.name = "Mharadium Arrow";

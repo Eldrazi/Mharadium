@@ -30,8 +30,15 @@ namespace Mharadium.Items.Consumables
 
         public override bool UseItem(Player player)
         {
-            NPC.SpawnOnPlayer(Main.myPlayer, mod.NPCType("SatansServant"));
-            Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
+            if (Mharadium.IsInHell(player.position))
+            {
+                NPC.SpawnOnPlayer(Main.myPlayer, mod.NPCType("SatansServant"));
+                Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
+            }
+            else
+            {
+                Main.NewText("This action can only be performed in hell!", 255, 255, 0, true);
+            }
             return true;
         }
 

@@ -25,8 +25,9 @@ namespace Mharadium.Items.Accessories
             item.width = 24;
             item.height = 30;
             item.toolTip = "Only true heroes can handle its power!";
+            item.toolTip2 = "Allows 5 minutes of flight.";
             item.value = Item.sellPrice(5, 0, 0, 0);
-            item.rare = 9;
+            item.rare = 10;
             item.accessory = true;
         }
 
