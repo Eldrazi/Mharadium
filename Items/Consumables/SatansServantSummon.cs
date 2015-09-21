@@ -38,6 +38,7 @@ namespace Mharadium.Items.Consumables
             else
             {
                 Main.NewText("This action can only be performed in hell!", 255, 255, 0, true);
+                item.stack++;
             }
             return true;
         }

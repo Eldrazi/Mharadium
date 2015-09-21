@@ -27,13 +27,21 @@ namespace Mharadium.Items.Accessories
             player.lifeRegen *= 10; // Extreme mana regen.
 
             player.lifeMagnet = true; // Attracts heart from a longer distance.
+            player.pStone = true; // Adds Philosopher's Stone effect.
             player.AddBuff(BuffID.Lifeforce, 2); // Adds the LifeForce buff.
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(ItemID.CharmofMyths);
+            recipe.AddIngredient(ItemID.RegenerationPotion);
+            recipe.AddIngredient(ItemID.SuperHealingPotion, 5);
+            recipe.AddIngredient(ItemID.HeartreachPotion);
+            recipe.AddIngredient(ItemID.LifeforcePotion);
+            recipe.AddIngredient(ItemID.LifeCrystal, 5);
+            recipe.AddIngredient(ItemID.LifeFruit, 5);
+            recipe.AddTile(null, "MharadiumAnvil");
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

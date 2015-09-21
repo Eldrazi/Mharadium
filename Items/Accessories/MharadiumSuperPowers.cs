@@ -24,7 +24,6 @@ namespace Mharadium.Items.Accessories
         public override void UpdateAccessory(Player player)
         {
             #region Boots Buffs
-            player.moveSpeed *= 1.5F; // Increases move speed by 50%.
             player.noFallDmg = true; // Negate any fall damage.
             player.waterWalk = true; // Walk on liquids.
             player.lavaMax += 600; // 10 seconds of lava immunity.
@@ -32,7 +31,7 @@ namespace Mharadium.Items.Accessories
             player.jumpBoost = true; // Allows the player to jump higher.
             player.doubleJumpCloud = true; // Allows double jumping.
             player.accRunSpeed = 10f; // Extra run speed max.
-            player.moveSpeed += 0.15f; // Extra move speed.
+            player.moveSpeed += 0.65f; // 65% faster move speed.
             #endregion
             #region Shield Buffs
             player.starCloak = true; // Causes stars to fall when damaged.
@@ -40,20 +39,31 @@ namespace Mharadium.Items.Accessories
             player.lavaRose = true; // Reduces damage taken from lava.
             player.fireWalk = true; // Prevents damage from Hellstone and Meteorite blocks.
             player.endurance += 0.2f; // Blocks 20% of incomming damage.
+            player.noKnockback = true; // Knockback resist.
+            player.buffImmune[46] = true;
+            player.buffImmune[33] = true;
+            player.buffImmune[36] = true;
+            player.buffImmune[30] = true;
+            player.buffImmune[20] = true;
+            player.buffImmune[32] = true;
+            player.buffImmune[31] = true;
+            player.buffImmune[35] = true;
+            player.buffImmune[23] = true;
+            player.buffImmune[22] = true;
             player.AddBuff(BuffID.PaladinsShield, 2); // Adds the Paladins Shield buff.
             player.AddBuff(BuffID.IceBarrier, 2);
             #endregion
             #region Emblem Buffs
-            player.meleeDamage *= 1.3F;
-            player.magicDamage *= 1.3F;
-            player.minionDamage *= 1.3F;
-            player.thrownDamage *= 1.3F;
-            player.rangedDamage *= 1.3F;
+            player.meleeDamage += 0.3F;
+            player.magicDamage += 0.3F;
+            player.minionDamage += 0.3F;
+            player.thrownDamage += 0.3F;
+            player.rangedDamage += 0.3F;
 
             player.AddBuff(BuffID.WeaponImbueFire, 2);
             #endregion
             #region Magic Ball Buffs
-            player.manaRegen *= 10; // Extreme mana regen.
+            player.manaRegen += 2; // 200% extra mana regen.
             player.manaCost -= 0.2f; // -20% mana cost.
 
             // Crystal Ball effects.
@@ -61,29 +71,35 @@ namespace Mharadium.Items.Accessories
             // Mana Flower effects.
             player.manaCost -= 0.08f; // -8% mana cost.
             player.manaFlower = true;
-            // Magic Power Potion effects.
-            player.magicDamage += 0.20f;
             // Celestial Cuffs effects.
             player.manaMagnet = true;
             player.magicCuffs = true;
-            // Celestial Emblem effects.
-            player.magicDamage += 0.15f;
-            // Sorcerer Emblem effects.
-            player.magicDamage += 0.15f;
+            // Celestial Emblem + Sorcerer Emblem + Magic Power Potion effects.
+            player.magicDamage += 0.5f;
             #endregion
             #region Health Band Buffs
-            player.lifeRegen *= 10; // Extreme mana regen.
+            player.lifeRegen += 2; // 200% extra health regen.
 
             player.lifeMagnet = true; // Attracts heart from a longer distance.
+            player.pStone = true; // Adds Philosopher's Stone effect.
             player.AddBuff(BuffID.Lifeforce, 2); // Adds the LifeForce buff.
             #endregion
+
             player.AddBuff(BuffID.Inferno, 2); // Adds the Inferno buff.
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(null, "MharadiumBoots");
+            recipe.AddIngredient(null, "MharadiumEmblem");
+            recipe.AddIngredient(null, "MharadiumShield");
+            recipe.AddIngredient(null, "MharadiumHealthBand");
+            recipe.AddIngredient(null, "MharadiumMagicBall");
+            recipe.AddIngredient(ItemID.CelestialShell);
+            recipe.AddIngredient(null, "MharadiumBar", 10);
+            recipe.AddIngredient(null, "DevilmiteShard");
+            recipe.AddTile(null, "MharadiumAnvil");
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

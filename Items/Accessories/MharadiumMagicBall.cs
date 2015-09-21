@@ -43,7 +43,18 @@ namespace Mharadium.Items.Accessories
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(ItemID.CrystalBall);
+            recipe.AddIngredient(ItemID.ManaFlower);
+            recipe.AddIngredient(ItemID.SuperManaPotion, 5);
+            recipe.AddIngredient(ItemID.MagicPowerPotion);
+            recipe.AddIngredient(ItemID.CrystalShard, 50);
+            recipe.AddIngredient(ItemID.ManaRegenerationPotion);
+            recipe.AddIngredient(ItemID.ManaCrystal, 10);
+            recipe.AddIngredient(ItemID.CelestialCuffs);
+            recipe.AddIngredient(ItemID.CelestialEmblem);
+            recipe.AddIngredient(ItemID.SorcererEmblem);
+            recipe.AddIngredient(null, "MharadiumBar", 5);
+            recipe.AddTile(null, "MharadiumAnvil");
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

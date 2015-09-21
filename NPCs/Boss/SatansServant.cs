@@ -12,6 +12,9 @@ namespace Mharadium.NPCs.Boss
     {
         private int currentAI = -1;
 
+        private int minionCount = 5;
+        private int[] minions;
+
         public override void SetDefaults()
         {
             npc.name = "Satan's Servant";
@@ -23,7 +26,7 @@ namespace Mharadium.NPCs.Boss
             npc.soundHit = 2;
             npc.soundKilled = 2;
             npc.knockBackResist = 0F;
-            npc.value = Item.sellPrice(5, 0, 0, 0);
+            npc.value = Item.buyPrice(5, 0, 0, 0);
             npc.boss = true;
             music = 25;
         }
@@ -31,6 +34,25 @@ namespace Mharadium.NPCs.Boss
         public override void AI()
         {
             npc.TargetClosest(true);
+
+            if (npc.localAI[1] == 0)
+            {
+                npc.localAI[1] = 1;
+                minions = new int[minionCount];
+            }
+
+            for (int i = 0; i < minionCount; ++i)
+            {
+                if (minions[i] == 0 || !Main.npc[minions[i]].active)
+                {
+                    int newMinion = NPC.NewNPC((int)npc.position.X + Main.rand.Next(-200, 200), (int)npc.position.Y + Main.rand.Next(-200, 200), 62);
+                    Main.npc[newMinion].lifeMax = 50000;
+                    Main.npc[newMinion].life = Main.npc[newMinion].lifeMax;
+                    Main.npc[newMinion].damage = 150;
+                    Main.npc[newMinion].displayName = "Servants Minion";
+                    minions[i] = newMinion;
+                }
+            }
 
             if (npc.life >= (npc.lifeMax / 2))
             {
@@ -224,6 +246,14 @@ namespace Mharadium.NPCs.Boss
                 }
             }
             npc.netUpdate = true;
+        }
+
+        public override void NPCLoot()
+        {
+            int oreAmount = Main.rand.Next(50, 71);
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MharadiumForge"));
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MharadiumOre"), oreAmount);
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SuperHealingPotion, 10);
         }
 
         public override void FindFrame(int frameHeight)

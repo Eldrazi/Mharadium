@@ -35,7 +35,13 @@ namespace Mharadium.Items.Accessories
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(ItemID.LightningBoots);
+            recipe.AddIngredient(ItemID.BlueHorseshoeBalloon);
+            recipe.AddIngredient(ItemID.Tabi);
+            recipe.AddIngredient(ItemID.LavaWaders);
+            recipe.AddIngredient(null, "MharadiumBar", 5);
+            recipe.AddTile(null, "MharadiumAnvil");
+            // Add 5 Mharadium Bars and Mharadium Anvil
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

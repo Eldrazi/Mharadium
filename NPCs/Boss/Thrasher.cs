@@ -1,5 +1,4 @@
 ﻿using System;
-using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
 using Terraria;
@@ -23,7 +22,7 @@ namespace Mharadium.NPCs.Boss
             npc.soundHit = 2;
             npc.soundKilled = 2;
             npc.knockBackResist = 0F;
-            npc.value = Item.sellPrice(5, 0, 0, 0);
+            npc.value = Item.buyPrice(5, 0, 0, 0);
             npc.noTileCollide = true;
             npc.noGravity = true;
             npc.boss = true;
@@ -35,7 +34,7 @@ namespace Mharadium.NPCs.Boss
             npc.TargetClosest(true);
             Player player = Main.player[npc.target];
 
-            /*if (npc.life >= (npc.lifeMax / 2)) // If the Thrasher has more than half it's health left.
+            if (npc.life >= (npc.lifeMax / 2)) // If the Thrasher has more than half it's health left.
             {
                 if (npc.life < (npc.lifeMax / 2))
                 {
@@ -45,7 +44,7 @@ namespace Mharadium.NPCs.Boss
                 }
             }
             else // If the Thrasher has less than half it's health
-            {*/
+            {
                 if (currentAI < 0) // First time in rage mode.
                 {
                     npc.ai[0] = 0;
@@ -148,7 +147,7 @@ namespace Mharadium.NPCs.Boss
                         npc.ai[0] = 0;
                     }
                 }
-            //}
+            }
 
             if (Main.rand.Next(2) != 0)
                 return;
@@ -197,6 +196,14 @@ namespace Mharadium.NPCs.Boss
                 }
             }
             npc.netUpdate = true;
+        }
+
+        public override void NPCLoot()
+        {
+            int oreAmount = Main.rand.Next(50, 71);
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MharadiumAnvil"));
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MharadiumOre"), oreAmount);
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SuperHealingPotion, 10);
         }
 
         public override void FindFrame(int frameHeight)

@@ -2,6 +2,23 @@
 
 - 21-09-'15
 	- Mharadium Tome is now Auto-Used (no more clicking).
+	- Mharadium Health Band now also has Philosopher's Stone effect.
+	- Added Ankh charm effects to Mharadium Shield- and Super Powers
+	- Satan's Servant now summons 5 Servants Minions to fight for him.
+	- Satan's Servant now drops 50-70 ore, Mharadium Forge and 10 Super Healing Potions.
+	- The Thrasher now drops 50-70 ore, Mharadium Anvil and 10 Super Healing Potions.
+	- Updated Recipe for the Mharadium Boots.
+	- Updated Recipe for the Mharadium Emblem.
+	- Updated Recipe for the Mharadium Shield.
+	- Updated Recipe for the Mharadium Health Band.
+	- Updated Recipe for the Mharadium Magic Ball.
+	- Updated Recipe for the Mharadium Super Powers.
+	- Added Devilmite Shard.
+	- Added Mharadium Bar.
+	- Added Mharadium Brick.
+	- Added Mharadium Ore.
+	- Added Mharadium Anvil.
+	- Added Mharadium Forge.
 
 - 20-09-'15
 	- Mharadium Bow now has a 16% chance not to consume ammo instead of 50%.
@@ -55,3 +72,4 @@
 	- Added Mharadium Tome.
 	- Added Bullet Pouch.
 	- Added Satan's Spell.
+

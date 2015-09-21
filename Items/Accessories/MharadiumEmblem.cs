@@ -22,11 +22,12 @@ namespace Mharadium.Items.Accessories
 
         public override void UpdateAccessory(Player player)
         {
-            player.meleeDamage *= 1.3F;
-            player.magicDamage *= 1.3F;
-            player.minionDamage *= 1.3F;
-            player.thrownDamage *= 1.3F;
-            player.rangedDamage *= 1.3F;
+            // Increase all damage by 30%
+            player.meleeDamage += 0.3F;
+            player.magicDamage += 0.3F;
+            player.minionDamage += 0.3F;
+            player.thrownDamage += 0.3F;
+            player.rangedDamage += 0.3F;
 
             player.AddBuff(BuffID.WeaponImbueFire, 2);
         }
@@ -34,7 +35,16 @@ namespace Mharadium.Items.Accessories
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(ItemID.FireGauntlet);
+            recipe.AddIngredient(ItemID.DestroyerEmblem);
+            recipe.AddIngredient(ItemID.AvengerEmblem);
+            recipe.AddIngredient(ItemID.RangerEmblem);
+            recipe.AddIngredient(ItemID.SummonerEmblem);
+            recipe.AddIngredient(ItemID.WarriorEmblem);
+            recipe.AddIngredient(ItemID.SorcererEmblem);
+            recipe.AddIngredient(null, "MharadiumBar", 5);
+            recipe.AddTile(null, "MharadiumAnvil");
+            // Add 5 Mharadium Bars and Mharadium Anvil
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
